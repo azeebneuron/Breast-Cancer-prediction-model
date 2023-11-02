@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Predictor Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ML Model Predictor</h1>
+        <form method="post" action="/predict">
+            <input type="text" name="radius_mean" placeholder="Radius Mean" required><br>
+            <input type="text" name="perimeter_mean" placeholder="Perimeter Mean" required><br>
+            <input type="text" name="area_mean" placeholder="Area Mean" required><br>
+            <input type="text" name="symmetry_mean" placeholder="Symmetry Mean" required><br>
+            <input type="text" name="compactness_mean" placeholder="Compactness Mean" required><br>
+            <input type="text" name="concave_points_mean" placeholder="Concave Points Mean" required><br>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <div class="result">
+                <h2>Prediction Result:</h2>
+                <p>{{ prediction_text }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
