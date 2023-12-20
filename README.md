@@ -56,8 +56,3 @@ The project achieves an accuracy of 91.8% and effectively predicts breast cancer
 
 The dataset used in this project is publicly available and can be accessed at https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
 
-## About the Author
-
-This project is created by Rahul Singh. Contact srahulsingh7488@gmail.com for any inquiries or suggestions.
-
-Feel free to contribute to the project by creating pull requests. Thank you for your interest!
